@@ -18,5 +18,6 @@ class Car(models.Model):
     )
     drivers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="cars")
 
+
 class Driver(AbstractUser):
     license_number = models.CharField(max_length=255, unique=True)
